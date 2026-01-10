@@ -1,0 +1,109 @@
+/* ================================
+   LESSONS PAGE
+================================ */
+
+.lessons-page {
+  padding: 24px;
+}
+
+.lessons-header {
+  margin-bottom: 20px;
+}
+
+.lessons-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Lesson Editor */
+.lesson-editor {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+.lesson-editor input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Action Buttons */
+.lesson-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.lesson-actions button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.lesson-actions .draft-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.lesson-actions .draft-btn:hover {
+  background: #d1d5db;
+}
+
+.lesson-actions .schedule-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.lesson-actions .schedule-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Lessons Grid */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Lesson Card */
+.lesson-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.lesson-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+/* Status Badge */
+.lesson-status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.lesson-status.draft {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.lesson-status.scheduled {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.lesson-status.published {
+  background: #dcfce7;
+  color: #166534;
+}

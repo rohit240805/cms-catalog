@@ -1,0 +1,32 @@
+.login-page {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1526378722484-cc5c51055e07");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-overlay {
+  height: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 380px;
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.login-card input {
+  margin-bottom: 12px;
+}

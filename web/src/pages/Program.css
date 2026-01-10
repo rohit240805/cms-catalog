@@ -1,0 +1,33 @@
+.page {
+  padding: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.program-card h3 {
+  margin: 10px 0;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.badge.published {
+  background: #16a34a;
+}
+
+.badge.draft {
+  background: #facc15;
+  color: black;
+}
+
+.badge.archived {
+  background: #6b7280;
+}

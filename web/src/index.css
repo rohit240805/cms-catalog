@@ -1,0 +1,53 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #111827;
+  --primary: #6366f1;
+  --secondary: #22c55e;
+  --danger: #ef4444;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #020617, #020617);
+  color: var(--text-main);
+}
+
+button {
+  background: var(--primary);
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: var(--secondary);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+input, select {
+  background: #020617;
+  border: 1px solid #1f2937;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
