@@ -1,5 +1,9 @@
+import threading
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from app.worker import run as worker_run
 
 from app.routers import (
     health,
@@ -24,6 +28,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ✅ START BACKGROUND WORKER ON APP STARTUP
+@app.on_event("startup")
+def start_background_worker():
+    thread = threading.Thread(
+        target=worker_run,
+        daemon=True
+    )
+    thread.start()
+    print("🚀 Background worker thread started")
 
 app.include_router(health.router)
 app.include_router(auth.router)
