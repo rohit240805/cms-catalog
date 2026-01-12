@@ -1,10 +1,10 @@
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://cms-catalog-api.onrender.com";
 
 export async function apiGet(path, token) {
   const res = await fetch(`${BASE_URL}${path}`, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
+    headers: token
+      ? { Authorization: `Bearer ${token}` }
+      : {}
   });
 
   if (!res.ok) {
@@ -23,17 +23,15 @@ export async function apiPost(path, body, token) {
     headers.Authorization = `Bearer ${token}`;
   }
 
-  const res = await fetch(`http://localhost:8000${path}`, {
+  const res = await fetch(`${BASE_URL}${path}`, {
     method: "POST",
     headers,
     body: JSON.stringify(body)
   });
 
   if (!res.ok) {
-    const text = await res.text();
-    throw new Error(text);
+    throw new Error(await res.text());
   }
 
   return res.json();
 }
-
